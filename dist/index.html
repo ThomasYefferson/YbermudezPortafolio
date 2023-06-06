@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans&family=PT+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script src="https://kit.fontawesome.com/76e80e420f.js" crossorigin="anonymous"></script>
+    <script src="./app.js" defer></script>
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (
+        localStorage.getItem('color-theme') === 'dark' ||
+        (!('color-theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+
+    <title>ybermudezPortafolio</title>
+  </head>
+  <body
+    class="bg-sky-50 text-stone-900 dark:bg-primary dark:text-cyan-50 font-roboto"
+  >
+    <header>
+      <!--  INICIO MENU  -->
+      <nav
+        class="flex justify-between py-10 m-auto px-10 text-lg font-medium tracking-widest md:items-center"
+      >
+        <a href=""><img src="./img/Icon-3.png" alt="" width="80" /></a>
+        <div
+          id="menu"
+          class="bg-white dark:bg-slate-800 p-7 h-[380px] w-[320px] md:flex flex-col items-start justify-around rounded-lg text-dark dark:text-white md:flex-row md:w-full md:py-0 md:h-[50px] md:bg-inherit md:dark:bg-primary hidden"
+        >
+          <ul
+            class="flex h-5/6 flex-col justify-around md:flex-row md:justify-center w-full"
+          >
+            <li class="md:px-5 hover:text-sky-600"><a href="#QuienSoy">Quién Soy</a></li>
+            <li class="md:px-5 hover:text-sky-600"><a href="#Experiencia">Experiencia</a></li>
+            <li class="md:px-5 hover:text-sky-600"><a href="#Habilidades">habilidades</a></li>
+            <li class="md:px-5 hover:text-sky-600"><a href="#Proyectos">Proyectos</a></li>
+            <li class="md:px-5 hover:text-sky-600"><a href="#Contacto">Contáctame</a></li>
+          </ul>
+          <!-- BOTON MODO OSCURO -->
+          <button id="darkButton">
+            <i class="bi bi-moon-stars-fill text-sky-600 text-2xl"></i>
+          </button>
+          <!-- BOTON MENU HAMBURGUESA -->
+        </div>
+        <button id="menu-button" class="absolute top-10 right-12 md:hidden">
+          <span
+            class="br-1 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
+          ></span>
+          <span
+            class="br-2 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
+          ></span>
+          <span
+            class="br-3 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
+          ></span>
+        </button>
+      </nav>
+      <!-- FIN DEL MENU  -->
+    </header>
+    <main>
+      <!-- #1 SECCION HERO  -->
+      <section id="QuienSoy" class="my-0 flex flex-col lg:flex-row lg:h-[850px]">
+        <div class="p-10 lg:w-[80%] lg:h-[500px] lg:self-center">
+          <h1
+            class="text-sky-600 dark:text-sky-300 text-2xl font-bold tracking-widest leading-10"
+          >
+            Hola, soy
+          </h1>
+          <p class="py-2 text-3xl font-bold text-slate-600 dark:text-slate-300">
+            Yefferson Bermudez Palacios
+          </p>
+          <p class="text-3xl font-bold text-slate-500 dark:text-slate-600">
+            Ingeniero de Sistemas / Developer Frontend.
+          </p>
+          <p class="mt-5 text-lg">
+            Apasionado por el desarrollo Frontend. Me encanta crear sitios web que brinden una experiencia de
+            usuario única y satisfactoria. Me considero una persona autodidacta, responsable y comprometida con
+            mi trabajo. Constantemente estoy aprendiendo nuevas tecnologías y herramientas para mejorar mis
+            habilidades para incursionar en el mundo de IT y aportar los conocimiento que adquirido en cada paso
+            de estudio que me he formado. Skill: JavaScript, NodeJs, Angular, MongoDB, HTML5, CSS3, React.
+          </p>
+          <!-- REDES SOCIALES -->
+          <div class="py-6">
+            <a href="https://wa.link/uq6jeb" class="pr-2 text-2xl hover:text-sky-600"><i class="bi bi-whatsapp px-2"></i></a>
+            <a href="https://www.facebook.com/Thomas.Yefferson27" class="pr-2 text-2xl hover:text-sky-600"><i class="bi bi-facebook px-2"></i></a>
+            <a href="http://www.linkedin.com/in/yefferson-bermudez-5b27528b" class="pr-2 text-2xl hover:text-sky-600"><i class="bi bi-linkedin px-2"></i></a>
+            <a href="https://github.com/ThomasYefferson" class="pr-2 text-2xl hover:text-sky-600"><i class="bi bi-github px-2"></i></a>
+            <a href="https://ybermudez.com/" class="pr-2 text-2xl hover:text-sky-600"><i class="bi bi-folder px-2"></i></a>
+          </div>
+          <div>
+            <a href="#Contacto">
+            <button
+              class="border-2 rounded border-sky-500 p-4 w-[250px] text-lg tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300"
+            >
+              Contrátame<i class="fa-solid fa-paper-plane px-2"></i>
+            </button>
+          </a>
+          <a href="https://drive.google.com/file/d/1Tzl859b91pDhI6XxTeUfACWQzGh51mcV/view?usp=sharing">
+            <button class="border-2 rounded border-sky-500 p-4 w-[250px] text-lg tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300">
+              Descargar CV <i class="bi bi-download px-2"></i>              
+            </button>
+          </a>
+          </div>
+        </div>
+        <!-- Contenedor para la Imagen -->
+        <div class="my-10 w-full">
+          <div
+            class="w-[300px] h-[320px] m-auto bg-[url('./img/Perfil-1.JPG')] lg:bg-[url('./img/Perfil-1.JPG')] bg-cover rounded-lg lg:w-[100%] lg:h-[100%] lg:bg-center lg:bg-no-repeat lg:bg-[length:450px_576px]"
+          ></div>
+        </div>
+      </section>
+
+      <!-- #2 SECCION EXPERIENCIA LABORAL -->
+      <h2 id="Experiencia"
+        class="text-3xl text-slate-700 dark:text-white font-bold tracking-widest w-[85%] m-auto text-center pt-8"
+      >
+        Experiencia Laboral
+      </h2>
+      <section
+        class="my-12 flex flex-col w-[84%] m-auto lg:flex-row lg:w-[87%] lg:my-28"
+        id="jobSection"
+      >
+        <div class="flex justify-between lg:flex-col lg:w-[20%]">
+          <button
+            type="button"
+            id="link1"
+            data-id="job1"
+            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left border-sky-500 bg-white dark:bg-slate-700"
+          >
+            Aguadulce
+          </button>
+          <button
+            type="button"
+            data-id="job2"
+            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left"
+          >
+            G4s
+          </button>
+          <button
+            type="button"
+            data-id="job3"
+            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left"
+          >
+            IdforIdeas
+          </button>          
+        </div>
+
+        <!-- CONTAINER JOB DESCRIPTION -->
+        <div class="my-5 lg:px-10 lg:my-0 lg:max-w-[800px]">
+          <!-- JOB #1 DESCRIPTION -->
+
+          <article id="job1">
+            <h3>
+              Analista CCTV
+              <span class="text-sky-500 font-bold text-lg">@puertoagaudulce</span>
+            </h3>
+            <h4 class="text-sm pb-5">Julio 2016 - Presente</h4>
+            <ul>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Realizar monitoreo en la aplicación Operator Client , de novedades, averías entres otros procesos en el área de
+                  seguridad.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Proporcionar calidad al servicio de monitoreo de alertas y alarmas, chequeo de cámaras.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Manejo de informes e indicadores de las operaciones que se desarrolla dentro del terminal portuario de Aguadulce.
+                </p>
+              </li>
+            </ul>
+          </article>
+          <!-- SECCIONES OCULTAS POR DEFECTO -->
+          <!-- JOB #2 DESCRIPTION -->
+
+          <article id="job2" class="hidden">
+            <h3>
+              G4s
+              <span class="text-sky-500 font-bold text-lg">@G4S</span>
+            </h3>
+            <h4 class="text-sm pb-5">Mayo 2011 - Julio 2016</h4>
+            <ul>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Atender los eventos del centro de control monitoreo de acuerdo con el Manual Protocolos de Operación del SISE - SPB.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Recibir turno revisando los eventos registrados en la minuta.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Atender todas las llamadas recibidas teniendo en cuenta los protocolos establecidos por la empresa
+                </p>
+              </li>
+            </ul>
+          </article>
+          <!-- JOB #3 DESCRIPTION -->
+          <article id="job3" class="hidden">
+            <h3>
+              Developer Front-End - practicas
+              <span class="text-sky-500 font-bold text-lg">@IDEAS</span>
+            </h3>
+            <h4 class="text-sm pb-5">Marzo 2023 - Mayo 2023</h4>
+            <ul>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Crear mendiantes codigo la interfaz del producto digital con la que tendra contacto los Usuarios.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Mantener y optimizar sitios web.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Programar, cambiar y mantener un sitio web.
+                </p>
+              </li>
+            </ul>
+          </article>          
+        </div>
+      </section>
+
+       <!-- #2 SECCION EDUACION -->
+       <h2 class="text-3xl text-slate-700 dark:text-white font-bold tracking-widest w-[85%] m-auto text-center pt-8">
+        Educación</h2>
+    <section class="my-2 flex flex-col w-[84%] m-auto lg:flex-row lg:w-[87%] lg:my-28" id="educationSection">
+        <div class="flex justify-between lg:flex-col lg:w-[20%]">
+            <button type="button" id="link2" data-id="education1"
+                class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg-text-left border-sky-500 bg-white dark:bg-slate-700">BIT</button>
+            <button type="button" data-id="education2"
+                class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg-text-left">UNAD</button>
+            <button type="button" data-id="education3"
+                class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg-text-left">Unipacifico</button>
+          </div>
+        <!-- DESCRIPCIÓN DE JOB -->
+        <div class="my-5 lg:px lg:my-0 lg:max-w[800px]">
+        <!-- EDUCATION #1 DESCRIPCIÓN -->
+
+        <article id="education1">
+            <h3>Desarrollador web FullStack<span class="text-sky-500 font-bold text-lg">@Bit</span></h3>
+            <h4 class="text-sm pb-5">Octubre 2022 - Marzo 2023</h4>
+            <ul>
+                <li class="flex items-center py-2">
+                    <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                    <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                      Se obtuvo habilidades técnicas de creación de API desde ceros, que pueda ser consumida por un Framework (Angular -
+                      React) con diseño responsivo, garantizando las buenas practicas solicitadas a desarrollar paginas web.
+                    </p>
+                </li>
+                <li class="flex items-center py-2">
+                    <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                    <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                      Trabaje en un proyecto final de una tienda e-commerce TopSpinStore donde desempeñe el rol de developer frontend creando
+                      la zona privada listando los productos y usuarios; utilizando TypeScript, Angular y JavaScript.
+                    </p>
+                </li>
+                <li class="flex items-center py-2">
+                    <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                    <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                      Aprendí muchísimas cosas nuevas y me siento muy conforme con el funcionamiento de los componentes en los que trabaje.
+                    </p>
+                </li>
+            </ul>
+        </article>
+        <!-- SECCIONES OCULTAS POR DEFECTO-->
+        <!-- JOB #2 DESCRIPCIÓN -->
+        <article id="education2" class="hidden">
+            <h3>Ingeniero de Sistemas<span class="text-sky-500 font-bold text-lg">@Unad</span></h3>
+            <h4 class="text-sm pb-5">Agosto 2018 - Abril 2022</h4>
+            <ul>
+                <li class="flex items-center py-2">
+                    <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                    <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                      Fue una experiencia muy bonita, en esta Universidad pude aprender muchas cosas que me han servido en mi vida profesional, sin duda la mejor mega Universidad.
+                    </p>
+                </li>
+                <li class="flex items-center py-2">
+                    <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                    <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                       Adquirid conocimiento sobre sistemas computaciones.
+                    </p>
+                </li>
+                <li class="flex items-center py-2">
+                    <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                    <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                      Capacidad para analizar y sentitizar información. 
+                    </p>
+                </li>
+            </ul>
+        </article>
+         <!-- JOB #3 DESCRIPCIÓN -->
+         <article id="education3" class="hidden">
+            <h3>Tecnólogo en Infomatica<span class="text-sky-500 font-bold text-lg">@Unipacifico</span></h3>
+            <h4 class="text-sm pb-5">2004 - 2010</h4>
+            <ul>
+                <li class="flex items-center py-2">
+                    <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                    <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                       Adquirid formacion tecnica solidad de software y hardware particularmente en sistemas operativos bajo ambiente window y Linux.
+                    </p>
+                </li>
+                <li class="flex items-center py-2">
+                    <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                    <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                      Desarrolle procedimientos de instalación y mantenimiento de programas de oftimática y gestión de perfiles de usuario.
+                    </p>
+                </li>
+                <li class="flex items-center py-2">
+                    <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                    <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                        Menejo de mantenimiento preventivo de hardware.
+                    </p>
+                </li>
+            </ul>
+        </article>         
+    </div>
+    </section>     
+      
+      <!-- SKILLS SECTION -->
+      <section id="Habilidades" class="my-4 flex flex-col  items-center justify-center w-[70%] h-[40%] m-auto lg:flex-row">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-white font-bold text-center mb-8">Habilidades Tecnicas</h2>          
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-6 bg-white dark:bg-slate-700 shadow-lg rounded-lg">
+              <div class="flex items-center mb-4">
+                <i class="fa-brands fa-html5 fa-2xl px-2"></i>
+                <h3 class="text-xl font-semibold">HTML5</h3>
+              </div>
+              <p class="text-white-700">Conocimiento desarrollo de estructura HTML5 semanticas.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-700 shadow-lg rounded-lg">
+              <div class="flex items-center mb-4">
+                <i class="fab fa-css3-alt text-3xl mr-4"></i>
+                <h3 class="text-xl font-semibold">CSS3</h3>
+              </div>
+              <p class="text-white-700">Conocimiento en estilos CSS y aplicando técnicas de diseño responsivo.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-700 shadow-lg rounded-lg">
+              <div class="flex items-center mb-4">
+                <i class="fab fa-js text-3xl px-2"></i>
+                <h3 class="text-xl font-semibold">JavaScript</h3>
+              </div>
+              <p class="text-white-700">Desarrollo de aplicaciones web interactivas utilizando JavaScript moderno.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-700 shadow-lg rounded-lg">
+              <div class="flex items-center mb-4">
+                <i class="fa-brands fa-angular fa-2xl px-2"></i>
+                <h3 class="text-xl font-semibold">Angular</h3>
+              </div>
+              <p class="text-white-700">Conocimiento en deesarrollar aplicaciones de una sola página.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-700 shadow-lg rounded-lg">
+              <div class="flex items-center mb-4">
+                <i class="fa-solid fa-database fa-2xl px-2"></i>
+                <h3 class="text-xl font-semibold">MongoDB</h3>
+              </div>
+              <p class="text-white-700">Conocimiento en Base de datos noSQL.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-700 shadow-lg rounded-lg">
+              <div class="flex items-center mb-4">
+                <i class="fa-brands fa-node fa-2xl px-2"></i>
+                <h3 class="text-xl font-semibold">NodeJs</h3>
+              </div>
+              <p class="text-white-700">Conocimiento para el servidor de aplicaciones web interactivas utilizando Nodejs.</p>
+            </div>        
+          </div>
+        </div>
+      </section>    
+  
+      <!--  SKILLS SECCION BLANDAS -->
+      <section class="my-4 flex flex-col  items-center justify-center w-[70%] h-[40%] m-auto lg:flex-row">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-white font-bold text-center mb-8">Habilidades Blandas</h2>          
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-6 bg-white dark:bg-slate-700 shadow-lg rounded-lg">
+              <div class="flex items-center mb-4">
+                <span>🤓</span>
+                <h3 class="text-xl font-semibold px-2">Creactividad</h3>
+              </div>
+              <p class="text-white-700">Me gusta ser creativo en es mis tareas.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-700 shadow-lg rounded-lg">
+              <div class="flex items-center mb-4">
+                <span>🤝</span>
+                <h3 class="text-xl font-semibold px-2">Colaboración</h3>
+              </div>
+              <p class="text-white-700">Me gusta trabajar conjuntamente con otras personas.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-700 shadow-lg rounded-lg">
+              <div class="flex items-center mb-4">
+                <span>🎯</span>
+                <h3 class="text-xl font-semibold px-2">Tenacidad</h3>
+              </div>
+              <p class="text-white-700">Me gusta conseguir en lo que me propongo.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-700 shadow-lg rounded-lg">
+              <div class="flex items-center mb-4">
+                <span>🤜🤛</span>
+                <h3 class="text-xl font-semibold px-2">Trabajo en equipo</h3>
+              </div>
+              <p class="text-white-700">Capacidad para participar a los objetivos del equipo.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-slate-700 shadow-lg rounded-lg">
+              <div class="flex items-center mb-4">
+                <span>🧠</span>
+                <h3 class="text-xl font-semibold px-2">Comunicación efectiva</h3>
+              </div>
+              <p class="text-white-700">Tengo capacidad para compartir ideas para lograr un objetivo.</p>
+            </div>                  
+          </div>
+        </div>
+      </section>    
+
+      <!-- FIND SKILLS BLANDAS-->
+
+      <!--MIS PROYECTOS-->
+ 
+      <h3 id="Proyectos"
+        class="text-3xl text-slate-700 dark:text-white my-5 px-12 font-bold tracking-widest md:text-center"
+      >
+        Mis Ultimos Proyectos
+      </h3>
+
+      <section
+        class="my-12 flex flex-col items-center justify-center w-[90%] m-auto lg:flex-row"
+      >
+        <!-- PRIMER PROYECTO  -->
+        <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
+          <div class="m-2">
+            <img
+              src="./img/1.png"
+              alt=""
+              class="opacity-80 hover:opacity-100"
+            />
+            <h4 class="font-bold my-2">MY CARD- TARJETA DE PRESENTACIÓN</h4>
+            <article class="flex justify-between">
+              <div class="flex flex-nowrap items-center">
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >HTML</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >CSS</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >JS</span
+                >
+              </div>
+              <div
+                class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap"
+              >
+                <a href="https://github.com/ThomasYefferson/My_Card"><i class="bi bi-github px-2"></i></a>
+                <a href="https://my-card-presentacion.netlify.app/"><i class="bi bi-eye px-2"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- SEGUNDO PROYECTO  -->
+        <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
+          <div class="m-2">
+            <img
+              src="./img/2.png"
+              alt=""
+              class="opacity-80 hover:opacity-100"
+            />
+            <h4 class="font-bold my-2">ANGIEFASHION - SALÓN DE BELLEZA</h4>
+            <article class="flex justify-between">
+              <div class="flex flex-nowrap items-center">
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >HTML</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >Bootstrap</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >JS</span
+                >
+              </div>
+              <div
+                class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap"
+              >
+                <a href="https://github.com/ThomasYefferson/Proyecto-Salondebelleza"><i class="bi bi-github px-2"></i></a>
+                <a href="https://angiefashion.netlify.app/"><i class="bi bi-eye px-2"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- TERCER PROYECTO  -->
+        <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
+          <div class="m-2">
+            <img
+              src="./img/3.jpeg"
+              alt=""
+              class="opacity-80 hover:opacity-100"
+            />
+            <h4 class="font-bold my-2">TOPSPINSTORE -E-COMMERCE</h4>
+            <article class="flex justify-between">
+              <div class="flex flex-nowrap items-center">
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >ANGULAR</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >TYPESCRIPT</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >JS</span
+                >
+              </div>
+              <div
+                class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap"
+              >
+                <a href="https://github.com/daochoam/TopSpinStore-MEAN"><i class="bi bi-github px-2"></i></a>
+                <a href="#"><i class="bi bi-eye px-2"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- SEGUNDO PROYECTO  -->
+        <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
+          <div class="m-2">
+            <img
+              src="./img/4.png"
+              alt=""
+              class="opacity-80 hover:opacity-100"
+            />
+            <h4 class="font-bold my-2">YBEMUDEZ - MI PORTAFOLIO</h4>
+            <article class="flex justify-between">
+              <div class="flex flex-nowrap items-center">
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >HTML</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >Tailwindcss</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >JS</span
+                >
+              </div>
+              <div
+                class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap"
+              >
+                <a href=""><i class="bi bi-github px-2"></i></a>
+                <a href="https://ybermudez.com/"><i class="bi bi-eye px-2"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+      <!-- #4 SECCION CONTACTOS  -->
+
+      <h3 id="Contacto"
+        class="text-3xl text-slate-700 dark:text-white mt-12 mb-10 px-10 font-bold tracking-widest text-center"
+      >
+        Contáctame
+      </h3>
+
+      <section class="flex flex-col w-[90%] m-auto" id="contacto">
+        <form action="" class="w-[90%] md:max-w-[600px] m-auto">
+          <div>
+            <input
+              placeholder="info@ejemplo.com"
+              type="email"
+              name="email"
+              id="email"
+              class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
+            />
+          </div>
+
+          <div class="py-3">
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Nombre"
+              class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
+            />
+          </div>
+
+          <div>
+            <textarea
+              name="msj"
+              id="msj"
+              rows="5"
+              placeholder="Mensaje"
+              class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
+            ></textarea>
+          </div>
+          <div class="my-3">
+            <button
+              class="bg-sky-600 text-white p-3 w-full rounded-lg text-xl tracking-widest"
+            >
+              Enviar Mensaje
+            </button>
+          </div>
+        </form>
+        <!-- #5 FOOTER  -->
+        <footer class="text-center mt-12 mb-5">
+          <p class="hover:text-sky-500">
+            Diseñado &#38; Desarrollado por ybermudez.
+          </p>
+          <a href="https://wa.link/uq6jeb" class="pr-2 text-2xl hover:text-sky-600"><i class="bi bi-whatsapp px-2"></i></a>
+            <a href="https://www.facebook.com/Thomas.Yefferson27" class="pr-2 text-2xl hover:text-sky-600"><i class="bi bi-facebook px-2"></i></a>
+            <a href="http://www.linkedin.com/in/yefferson-bermudez-5b27528b" class="pr-2 text-2xl hover:text-sky-600"><i class="bi bi-linkedin px-2"></i></a>
+            <a href="https://github.com/ThomasYefferson" class="pr-2 text-2xl hover:text-sky-600"><i class="bi bi-github px-2"></i></a>
+            <a href="https://ybermudez.com/" class="pr-2 text-2xl hover:text-sky-600"><i class="bi bi-folder px-2"></i></a>
+          </div>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
