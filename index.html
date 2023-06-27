@@ -4,20 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans&family=PT+Sans&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans&family=PT+Sans&family=Roboto&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"/>
     <script src="https://kit.fontawesome.com/76e80e420f.js" crossorigin="anonymous"></script>
-    <link href="./img/icon-perfil.png" rel="icon">
-    <script src="./app.js" defer></script>
+    <script src="./dist/app.js" defer></script>
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (
@@ -30,7 +23,6 @@
         document.documentElement.classList.remove('dark');
       }
     </script>
-
     <title>ybermudezPortafolio</title>
   </head>
   <body
@@ -41,7 +33,7 @@
       <nav
         class="flex justify-between py-10 m-auto px-10 text-lg font-medium tracking-widest md:items-center"
       >
-        <a href="index.html" class="md:px-5 hover:text-sky-600 text-3xl"><strong>Ybermudez</strong></a>
+        <a href=""><img src="./dist/img/Icon-3.png" alt="" width="80" /></a>
         <div
           id="menu"
           class="bg-white dark:bg-slate-800 p-7 h-[380px] w-[320px] md:flex flex-col items-start justify-around rounded-lg text-dark dark:text-white md:flex-row md:w-full md:py-0 md:h-[50px] md:bg-inherit md:dark:bg-primary hidden"
@@ -51,7 +43,7 @@
           >
             <li class="md:px-5 hover:text-sky-600"><a href="#QuienSoy">Quién Soy</a></li>
             <li class="md:px-5 hover:text-sky-600"><a href="#Experiencia">Experiencia</a></li>
-            <li class="md:px-5 hover:text-sky-600"><a href="#Habilidades">habilidades</a></li>
+            <li class="md:px-5 hover:text-sky-600"><a href="#Habilidades">Habilidades</a></li>
             <li class="md:px-5 hover:text-sky-600"><a href="#Proyectos">Proyectos</a></li>
             <li class="md:px-5 hover:text-sky-600"><a href="#Contacto">Contáctame</a></li>
           </ul>
@@ -62,15 +54,9 @@
           <!-- BOTON MENU HAMBURGUESA -->
         </div>
         <button id="menu-button" class="absolute top-10 right-12 md:hidden">
-          <span
-            class="br-1 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
-          ></span>
-          <span
-            class="br-2 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
-          ></span>
-          <span
-            class="br-3 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
-          ></span>
+          <span class="br-1 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"></span>
+          <span class="br-2 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"></span>
+          <span class="br-3 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"></span>
         </button>
       </nav>
       <!-- FIN DEL MENU  -->
@@ -95,7 +81,7 @@
             usuario única y satisfactoria. Me considero una persona autodidacta, responsable y comprometida con
             mi trabajo. Constantemente estoy aprendiendo nuevas tecnologías y herramientas para mejorar mis
             habilidades para incursionar en el mundo de IT y aportar los conocimiento que adquirido en cada paso
-            de estudio que me he formado. Skill: JavaScript, NodeJs, Angular, MongoDB, HTML5, CSS3, React formacion.
+            de estudio que me he formado. Skill: JavaScript, NodeJs, Angular, MongoDB, HTML5, CSS3, React.
           </p>
           <!-- REDES SOCIALES -->
           <div class="py-6">
@@ -107,9 +93,7 @@
           </div>
           <div>
             <a href="#Contacto">
-            <button
-              class="border-2 rounded border-sky-500 p-4 w-[250px] text-lg tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300"
-            >
+            <button class="border-2 rounded border-sky-500 p-4 w-[250px] text-lg tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300">
               Contrátame<i class="fa-solid fa-paper-plane px-2"></i>
             </button>
           </a>
@@ -122,43 +106,23 @@
         </div>
         <!-- Contenedor para la Imagen -->
         <div class="my-10 w-full">
-          <div
-            class="w-[300px] h-[320px] m-auto bg-[url('./img/Perfil-1.JPG')] lg:bg-[url('./img/Perfil-1.JPG')] bg-cover rounded-lg lg:w-[100%] lg:h-[100%] lg:bg-center lg:bg-no-repeat lg:bg-[length:450px_576px]"
-          ></div>
+          <div class="w-[300px] h-[320px] m-auto bg-[url('./img/Perfil-1.JPG')] lg:bg-[url('./img/Perfil-1.JPG')] bg-cover rounded-lg lg:w-[100%] lg:h-[100%] lg:bg-center lg:bg-no-repeat lg:bg-[length:450px_576px]"></div>
         </div>
       </section>
 
       <!-- #2 SECCION EXPERIENCIA LABORAL -->
-      <h2 id="Experiencia"
-        class="text-3xl text-slate-700 dark:text-white font-bold tracking-widest w-[85%] m-auto text-center pt-8"
-      >
+      <h2 id="Experiencia" class="text-3xl text-slate-700 dark:text-white font-bold tracking-widest w-[85%] m-auto text-center pt-8">
         Experiencia Laboral
       </h2>
-      <section
-        class="my-12 flex flex-col w-[84%] m-auto lg:flex-row lg:w-[87%] lg:my-28"
-        id="jobSection"
-      >
+      <section class="my-12 flex flex-col w-[84%] m-auto lg:flex-row lg:w-[87%] lg:my-28" id="jobSection">
         <div class="flex justify-between lg:flex-col lg:w-[20%]">
-          <button
-            type="button"
-            id="link1"
-            data-id="job1"
-            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left border-sky-500 bg-white dark:bg-slate-700"
-          >
+          <button type="button" id="link1" data-id="job1" class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left border-sky-500 bg-white dark:bg-slate-700">
             Aguadulce
           </button>
-          <button
-            type="button"
-            data-id="job2"
-            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left"
-          >
+          <button type="button" data-id="job2" class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left">
             G4s
           </button>
-          <button
-            type="button"
-            data-id="job3"
-            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left"
-          >
+          <button type="button" data-id="job3" class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left">
             IdforIdeas
           </button>          
         </div>
@@ -445,45 +409,27 @@
             </div>                  
           </div>
         </div>
-      </section>    
-
-      <!-- FIND SKILLS BLANDAS-->
+      </section> 
 
       <!--MIS PROYECTOS-->
  
-      <h3 id="Proyectos"
-        class="text-3xl text-slate-700 dark:text-white my-5 px-12 font-bold tracking-widest md:text-center"
-      >
+      <h3 id="Proyectos" class="text-3xl text-slate-700 dark:text-white my-5 px-12 font-bold tracking-widest md:text-center">
         Mis Ultimos Proyectos
       </h3>
 
-      <section
-        class="my-12 flex flex-col items-center justify-center w-[90%] m-auto lg:flex-row"
-      >
+      <section class="my-12 flex flex-col items-center justify-center w-[90%] m-auto lg:flex-row">
         <!-- PRIMER PROYECTO  -->
         <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
           <div class="m-2">
-            <img
-              src="./img/1.png"
-              alt=""
-              class="opacity-80 hover:opacity-100"
-            />
+            <img src="./dist/img/1.png" alt="" class="opacity-80 hover:opacity-100"/>
             <h4 class="font-bold my-2">MY CARD- TARJETA DE PRESENTACIÓN</h4>
             <article class="flex justify-between">
               <div class="flex flex-nowrap items-center">
-                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
-                  >HTML</span
-                >
-                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
-                  >CSS</span
-                >
-                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
-                  >JS</span
-                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">HTML</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">CSS</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">JS</span>
               </div>
-              <div
-                class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap"
-              >
+              <div class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap">
                 <a href="https://github.com/ThomasYefferson/My_Card"><i class="bi bi-github px-2"></i></a>
                 <a href="https://my-card-presentacion.netlify.app/"><i class="bi bi-eye px-2"></i></a>
               </div>
@@ -494,27 +440,15 @@
         <!-- SEGUNDO PROYECTO  -->
         <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
           <div class="m-2">
-            <img
-              src="./img/2.png"
-              alt=""
-              class="opacity-80 hover:opacity-100"
-            />
+            <img src="./dist/img/2.png" alt="" class="opacity-80 hover:opacity-100"/>
             <h4 class="font-bold my-2">ANGIEFASHION - SALÓN DE BELLEZA</h4>
             <article class="flex justify-between">
               <div class="flex flex-nowrap items-center">
-                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
-                  >HTML</span
-                >
-                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
-                  >Bootstrap</span
-                >
-                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
-                  >JS</span
-                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">HTML</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">Bootstrap</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">JS</span>
               </div>
-              <div
-                class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap"
-              >
+              <div class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap">
                 <a href="https://github.com/ThomasYefferson/Proyecto-Salondebelleza"><i class="bi bi-github px-2"></i></a>
                 <a href="https://angiefashion.netlify.app/"><i class="bi bi-eye px-2"></i></a>
               </div>
@@ -524,27 +458,15 @@
         <!-- TERCER PROYECTO  -->
         <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
           <div class="m-2">
-            <img
-              src="./img/3.jpeg"
-              alt=""
-              class="opacity-80 hover:opacity-100"
-            />
+            <img src="./dist/img/3.jpeg" alt="" class="opacity-80 hover:opacity-100"/>
             <h4 class="font-bold my-2">TOPSPINSTORE -E-COMMERCE</h4>
             <article class="flex justify-between">
               <div class="flex flex-nowrap items-center">
-                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
-                  >ANGULAR</span
-                >
-                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
-                  >TYPESCRIPT</span
-                >
-                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
-                  >JS</span
-                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">ANGULAR</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">TYPESCRIPT</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">JS</span>
               </div>
-              <div
-                class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap"
-              >
+              <div class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap">
                 <a href="https://github.com/daochoam/TopSpinStore-MEAN"><i class="bi bi-github px-2"></i></a>
                 <a href="#"><i class="bi bi-eye px-2"></i></a>
               </div>
@@ -554,82 +476,44 @@
         <!-- SEGUNDO PROYECTO  -->
         <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
           <div class="m-2">
-            <img
-              src="./img/4.png"
-              alt=""
-              class="opacity-80 hover:opacity-100"
-            />
+            <img src="./dist/img/4.png" alt=""class="opacity-80 hover:opacity-100"/>
             <h4 class="font-bold my-2">YBEMUDEZ - MI PORTAFOLIO</h4>
             <article class="flex justify-between">
               <div class="flex flex-nowrap items-center">
-                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
-                  >HTML</span
-                >
-                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
-                  >Tailwindcss</span
-                >
-                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
-                  >JS</span
-                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">HTML</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">Tailwindcss</span>
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700">JS</span>
               </div>
-              <div
-                class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap"
-              >
+              <div class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap">
                 <a href="https://github.com/ThomasYefferson/YbermudezPortafolio"><i class="bi bi-github px-2"></i></a>
                 <a href="https://ybermudez.com/"><i class="bi bi-eye px-2"></i></a>
               </div>
             </article>
           </div>
         </div>
-      </section>
-      
+      </section>      
       <!-- #4 SECCION CONTACTOS  -->
-
-      <h3 id="Contacto"
-        class="text-3xl text-slate-700 dark:text-white mt-12 mb-10 px-10 font-bold tracking-widest text-center"
-      >
+      <h3 id="Contacto" class="text-3xl text-slate-700 dark:text-white mt-12 mb-10 px-10 font-bold tracking-widest text-center">
         Contáctame
       </h3>
-
-      <section class="flex flex-col w-[90%] m-auto" id="contacto">
-        <form action="" class="w-[90%] md:max-w-[600px] m-auto">
-          <div>
-            <input
-              placeholder="info@ejemplo.com"
-              type="email"
-              name="email"
-              id="email"
-              class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
-            />
-          </div>
-
+      <section class="flex flex-col w-[90%] m-auto" id="contacto">        
+        <form id="form" action="" class="w-[90%] md:max-w-[600px] m-auto">
           <div class="py-3">
-            <input
-              type="text"
-              name="nombre"
-              id="nombre"
-              placeholder="Nombre"
-              class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
-            />
+            <input type="text" name="nombre"  placeholder="Nombre" class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400" required/>
           </div>
-
           <div>
-            <textarea
-              name="msj"
-              id="msj"
-              rows="5"
-              placeholder="Mensaje"
-              class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
-            ></textarea>
+            <input placeholder="info@ejemplo.com" type="email" name="email"  class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400" required/>
+          </div>          
+          <div class="py-3">
+            <textarea type="text" name="msj" rows="5" placeholder="Mensaje" class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400" required></textarea>
           </div>
-          <div class="my-3">
-            <button
-              class="bg-sky-600 text-white p-3 w-full rounded-lg text-xl tracking-widest"
-            >
-              Enviar Mensaje
-            </button>
-          </div>
+          <div class="my-3">            
+               <input class="bg-sky-600 text-white p-3 w-full rounded-lg text-xl tracking-widest hover:bg-red-500 hover:dark:text-slate-900" type="submit" id="button" value="Enviar Mensaje">
+            </div>
         </form>
+        <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">emailjs.init('7jGwbLtwfwvtMKevW')
+        </script>
         <!-- #5 FOOTER  -->
         <footer class="text-center mt-12 mb-5">
           <p class="hover:text-sky-500">
@@ -646,4 +530,26 @@
       </section>
     </main>
   </body>
+        <script>
+          const btn = document.getElementById('button');
+
+      document.getElementById('form')
+      .addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        btn.value = 'Enviando...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_g5pfgwg';
+
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            btn.value = 'Enviar Mensaje';
+            alert('Mensaje enviado correctamente!');
+          }, (err) => {
+            btn.value = 'Enviar Mensaje';
+            alert(JSON.stringify(err));
+          });
+      });
+  </script>
 </html>
